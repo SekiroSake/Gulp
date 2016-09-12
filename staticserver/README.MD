@@ -15,5 +15,10 @@
 - npm install --save-dev gulp-livereload
 - livereload function in gulpfile.js
 - in html:'script src="<http://localhost:35729/livereload.js>" /script'
-
 - gulp watch
+
+# How to run gulp concatenate
+
+- npm install gulp-concat --save-dev
+- style functions
+- gulp styles
