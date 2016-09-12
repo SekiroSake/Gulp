@@ -27,3 +27,9 @@
 
 - npm install gulp-minify-css --save-dev
 - apply changes in styles function in gulpfile.js
+- run gulp styles
+
+# How to watch gulp minify css
+
+- see watch function
+- run 'gulp watch'
