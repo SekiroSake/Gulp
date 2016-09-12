@@ -8,4 +8,15 @@
 # How to run gulp watch
 
 - watch function in gulpfile.js
--
+- gulp watch
+
+# How to run gulp livereload
+
+- npm install --save-dev gulp-livereload
+- livereload function in gulpfile.js
+- in html:
+
+  <script src="http://localhost:35729/livereload.js">
+  </script>
+
+- gulp watch
