@@ -17,8 +17,13 @@
 - in html:'script src="<http://localhost:35729/livereload.js>" /script'
 - gulp watch
 
-# How to run gulp concatenate
+# How to run gulp concatenate css
 
 - npm install gulp-concat --save-dev
 - style functions
 - gulp styles
+
+# How to run gulp minify css
+
+- npm install gulp-minify-css --save-dev
+- apply changes in styles function in gulpfile.js
