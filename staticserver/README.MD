@@ -14,9 +14,6 @@
 
 - npm install --save-dev gulp-livereload
 - livereload function in gulpfile.js
-- in html:
-
-  <script src="http://localhost:35729/livereload.js">
-  </script>
+- in html:'script src="<http://localhost:35729/livereload.js>" /script'
 
 - gulp watch
