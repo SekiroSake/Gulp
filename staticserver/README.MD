@@ -37,4 +37,10 @@
 # How to handle error
 
 - npm install gulp-plumber --save-dev
-- modify scripts function 
+- modify scripts function
+
+# How to Source Map
+- npm install gulp-sourcemaps --save-dev
+
+# How to SASS
+- npm install gulp-sass --save-dev
