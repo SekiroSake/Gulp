@@ -74,5 +74,6 @@ gulp.task('watch', function() {
     require('./server.js');
     livereload.listen();
     gulp.watch(SCRIPT_PATH, ['scripts']);
-    gulp.watch(CSS_PATH, ['styles']);
+    //gulp.watch(CSS_PATH, ['styles']);
+    gulp.watch('public/scss/**/*.scss',['styles']);
 });
