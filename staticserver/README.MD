@@ -33,3 +33,8 @@
 
 - see watch function
 - run 'gulp watch'
+
+# How to handle error
+
+- npm install gulp-plumber --save-dev
+- modify scripts function 
