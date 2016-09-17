@@ -34,22 +34,22 @@ var CSS_PATH = 'public/css/**/*.css';
 gulp.task('styles', function() {
     console.log('starting styles task');
     //return gulp.src(CSS_PATH)
-      return gulp.src('public/scss/styles.scss')//use array to specify which css load first
-      .pipe(plumber(function(err){
-        console.log("styles task error");
-        console.log(err);
-        this.emit('end');
-      }))
-      .pipe(sourcemaps.init())
-      .pipe(autoprefixer())
-      /*.pipe(concat('styles.css'))
-      .pipe(minifyCss())*/
-      .pipe(sass({
-        outputStyle: 'compressed'
-      }))
-      .pipe(sourcemaps.write())
-      .pipe(gulp.dest(DISCT_PATH))
-      .pipe(livereload());
+    return gulp.src('public/scss/styles.scss') //use array to specify which css load first
+        .pipe(plumber(function(err) {
+            console.log("styles task error");
+            console.log(err);
+            this.emit('end');
+        }))
+        .pipe(sourcemaps.init())
+        .pipe(autoprefixer())
+        /*.pipe(concat('styles.css'))
+        .pipe(minifyCss())*/
+        .pipe(sass({
+            outputStyle: 'compressed'
+        }))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(DISCT_PATH))
+        .pipe(livereload());
 });
 
 //Scripts -> js
@@ -57,7 +57,15 @@ gulp.task('scripts', function() {
     console.log('starting scripts task');
 
     return gulp.src(SCRIPT_PATH)
+        .pipe(plumber(function (err){
+          console.log('Scripts Task Error');
+          console.log(err);
+          this.emit('end');
+        }))
+        .pipe(sourcemaps.init())
         .pipe(uglify())
+        .pipe(concat('scripts.js'))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest(DISCT_PATH))
         .pipe(livereload());
 });
@@ -75,5 +83,5 @@ gulp.task('watch', function() {
     livereload.listen();
     gulp.watch(SCRIPT_PATH, ['scripts']);
     //gulp.watch(CSS_PATH, ['styles']);
-    gulp.watch('public/scss/**/*.scss',['styles']);
+    gulp.watch('public/scss/**/*.scss', ['styles']);
 });
