@@ -1,3 +1,8 @@
+## Important update
+-  start with 'gulp watch'
+-  because default function is in watch and everything else is in default function
+
+
 # How to run gulp server
 
 - Cd to the folder and run -> 'npm install gulp --save'
