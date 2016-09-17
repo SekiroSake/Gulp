@@ -44,3 +44,7 @@
 
 # How to SASS
 - npm install gulp-sass --save-dev
+
+# How to es 6 run in normal browser
+-  install babel
+-  npm install --save-dev gulp-babel babel-preset-es2015
