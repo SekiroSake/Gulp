@@ -15,4 +15,8 @@ var person = new Person('jon');
 
 //var name = ' jenx';
 
-document.write(person.hello());
+
+var greethtml = templates['greeting']({
+  message:person.hello()
+});
+document.write(greethtml);
